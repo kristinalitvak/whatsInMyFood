@@ -17,7 +17,7 @@ function fetchData() {
         var palmOilStatus = ingredientTags[0];
         var nutrients = productData.nutriments;
 
-        // ------------------------------- -PRINT PRODUCT NAME -------------------------------------------
+        // ------------------------------- PRINT PRODUCT NAME -------------------------------------------
         document.getElementById('product-name').innerHTML = "Product name: " + productData.product_name_en;
 
         // ------------------------CHECK FOR COMMON ALLERGENS -------------------------------------------
