@@ -51,9 +51,7 @@ function fetchData() {
         if((palmOilStatus.toString()) === "en:palm-oil") {
             palmOilOutput.innerHTML = "Contains Palm oil";
         }else if((palmOilStatus.toString()) === "en:palm-oil-free") {
-            palmOilOutput.innerHTML= "Palm Oil Free";
-        }else if((palmOilStatus.toString()) === "en:palm-oil-content-unknown") {
-            palmOilOutput.innerHTML = "";}
+            palmOilOutput.innerHTML= "Palm Oil Free";}
     })
 }
 
