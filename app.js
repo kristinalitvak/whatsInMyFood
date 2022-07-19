@@ -25,7 +25,6 @@ function fetchData() {
 
         // ------------------------CHECK FOR FATS,CARBS,SUGARS -------------------------------------------
         let nutrientOutput = document.getElementById('nutrient-info');
-        
 
         if((nutrients.fat && nutrients.carbohydrates && nutrients.sugars) != undefined) {
             nutrientOutput.innerHTML = "Fat: " + nutrients.fat + "g |" + " Carbs: " + nutrients.carbohydrates + "g |" +  " Sugars: " + nutrients.sugars + "g";
