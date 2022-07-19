@@ -1,7 +1,5 @@
 function fetchData() {
     let userInputValue = document.getElementById('input-field').value;
-    console.log(userInputValue);
-
     let api_url = `https://world.openfoodfacts.org/api/v0/product/${userInputValue}.json`;
 
     fetch(api_url)
