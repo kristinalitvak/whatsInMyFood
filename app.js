@@ -30,10 +30,8 @@ function fetchData() {
 
         if((nutrients.fat && nutrients.carbohydrates && nutrients.sugars) != undefined) {
             nutrientOutput.innerHTML = "Fat: " + nutrients.fat + "g |" + " Carbs: " + nutrients.carbohydrates + "g |" +  " Sugars: " + nutrients.sugars + "g";
-        }
-        else {
-            nutrientOutput.innerHTML = "Fat: n/a" + " |" +" Carbs: n/a" + " |" +  " Sugars: n/a ";
-        }
+        }else {
+            nutrientOutput.innerHTML = "Fat: n/a" + " |" +" Carbs: n/a" + " |" +  " Sugars: n/a ";}
 
         // ---------------------------- CHECK IF VEGAN --------------------------------------------------
         let veganOutput = document.getElementById('vegan-status');
