@@ -10,6 +10,10 @@ function fetchData() {
     })
     .then(data => {
         console.log(data);
+        if(data.status===0){
+            document.getElementById('product-name').innerHTML = (`Sorry, product ${userInputValue} not found! Enter another barcode.`);
+        }   
+        
         var productData = data.product;
         var allergens = productData.allergens;
         var ingredientTags = productData.ingredients_analysis_tags;
