@@ -23,7 +23,7 @@ function fetchData() {
         document.getElementById('product-name').innerHTML = "Product name: " + productData.product_name_en;
 
         // ------------------------CHECK FOR COMMON ALLERGENS -------------------------------------------
-        document.getElementById('allergens').innerHTML = "common allergens:" + (allergens === "" ? "none found" : allergens)
+        document.getElementById('allergens').innerHTML = "common allergens:" + (allergens === "" ? "none found" : allergens);
 
         // ------------------------CHECK FOR FATS,CARBS,SUGARS -------------------------------------------
         let nutrientOutput = document.getElementById('nutrient-info');
