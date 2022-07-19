@@ -41,8 +41,7 @@ function fetchData() {
         }else if((veganStatus.toString()) === "en:vegan") {
             veganOutput.innerHTML = "vegan status: vegan &#x2714;";
         }else if((veganStatus.toString()) === "en:non-vegan") {
-            veganOutput.innerHTML = "vegan status: non-vegan &#10008;";
-        }
+            veganOutput.innerHTML = "vegan status: non-vegan &#10008;";}
 
         // ------------------ CHECK IF PRODUCT CONTAINS PALM OIL ----------------------------------------
         let palmOilOutput = document.getElementById('palm-oil-content');
@@ -52,8 +51,7 @@ function fetchData() {
         }else if((palmOilStatus.toString()) === "en:palm-oil-free") {
             palmOilOutput.innerHTML= "Palm Oil Free";
         }else if((palmOilStatus.toString()) === "en:palm-oil-content-unknown") {
-            palmOilOutput.innerHTML = "";
-        }
+            palmOilOutput.innerHTML = "";}
     })
 }
 
