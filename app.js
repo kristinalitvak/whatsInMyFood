@@ -36,11 +36,11 @@ function fetchData() {
         // ---------------------------- CHECK IF VEGAN --------------------------------------------------
         let veganOutput = document.getElementById('vegan-status');
 
-        if ((veganStatus.toString()) === "en:vegan-status-unknown") {
+        if((veganStatus.toString()) === "en:vegan-status-unknown") {
             veganOutput.innerHTML = "vegan status: unknown :(";
-        }else if ((veganStatus.toString()) === "en:vegan") {
+        }else if((veganStatus.toString()) === "en:vegan") {
             veganOutput.innerHTML = "vegan status: vegan &#x2714;";
-        }else if ((veganStatus.toString()) === "en:non-vegan") {
+        }else if((veganStatus.toString()) === "en:non-vegan") {
             veganOutput.innerHTML = "vegan status: non-vegan &#10008;";
         }
 
