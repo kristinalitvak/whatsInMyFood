@@ -22,7 +22,7 @@
     <div class="container">                                                
         <h1 id="center-logo">What's In My Food?</h1>
         <div class="input-container">
-            <input type="Number" id="input-field" name="input-field" placeholder="Enter barcode">    
+            <input type="Number" id="input-field" name="input-field" placeholder="Enter barcode" onfocus="this.value=''">    
             <button class="submit-button" type="button" onclick="fetchData()">Calculate</button>
         </div>
         <div class="output-boxes" id="product-name"></div>
