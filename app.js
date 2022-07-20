@@ -66,7 +66,7 @@ function checkNutrients(nutrients) {
 // ---------------------------- CHECK IF VEGAN --------------------------------------------------
 function checkIfVegan(veganStatus) {
     if((veganStatus.toString()) === "en:vegan-status-unknown" || "en:maybe-vegan") {
-        veganOutput.innerHTML = "vegan status: unknown :(";
+        veganOutput.innerHTML = "vegan status: n/a";
     }else if((veganStatus.toString()) === "en:vegan") {
         veganOutput.innerHTML = "vegan status: vegan &#x2714;";
     }else if((veganStatus.toString()) === "en:non-vegan") {
