@@ -6,7 +6,7 @@ var palmOilOutput = document.getElementById('palm-oil-content');
 
 function clearData() {
     productNameOutput.innerHTML = '';
-    allergens.innerHTML = '';
+    allergenOutput.innerHTML = '';
     nutrientOutput.innerHTML = '';
     veganOutput.innerHTML = '';
     palmOilOutput.innerHTML = '';
