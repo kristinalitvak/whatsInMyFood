@@ -17,7 +17,6 @@ function fetchData() {
     productNameOutput.innerHTML = 'Loading...';
     let userInputValue = document.getElementById('input-field').value;
     let api_url = `https://world.openfoodfacts.org/api/v0/product/${userInputValue}.json`;
-
     fetch(api_url)
     .then(response => {
         return response.json();
@@ -27,20 +26,28 @@ function fetchData() {
         if(data.status===0){
             productNameOutput.innerHTML = (`Sorry, product ${userInputValue} not found! Enter another barcode.`);
         }   
-        
         var productData = data.product;
+        var productName = productData.product_name_en;
         var allergens = productData.allergens;
         var ingredientTags = productData.ingredients_analysis_tags;
         var veganStatus = ingredientTags[1];
         var palmOilStatus = ingredientTags[0];
         var nutrients = productData.nutriments;
 
-        productNameOutput.innerHTML = "Product name: " + productData.product_name_en;
+        printProductName(productName);
         checkAllergens(allergens);    
         checkNutrients(nutrients);
         checkIfVegan(veganStatus);
         checkPalmOil(palmOilStatus);
     })
+}
+
+// ------------------------------- PRINT PRODUCT NAME -------------------------------------------
+function printProductName(productName) {
+    if(productName === undefined || productName === '') {
+        productNameOutput.innerHTML = "Product name: N/A";
+    }else {
+        productNameOutput.innerHTML = "Product name: " + productName;}
 }
 
 // ------------------------CHECK FOR COMMON ALLERGENS -------------------------------------------
