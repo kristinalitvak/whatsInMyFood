@@ -14,7 +14,7 @@ function clearData() {
 
 function fetchData() {
     clearData();
-    productNameOutput.innerHTML = 'Loading...'
+    productNameOutput.innerHTML = 'Loading...';
     let userInputValue = document.getElementById('input-field').value;
     let api_url = `https://world.openfoodfacts.org/api/v0/product/${userInputValue}.json`;
 
