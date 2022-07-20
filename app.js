@@ -1,4 +1,20 @@
+var productNameOutput = document.getElementById('product-name');
+var allergenOutput = document.getElementById('allergens');
+var nutrientOutput = document.getElementById('nutrient-info');
+var veganOutput = document.getElementById('vegan-status');
+var palmOilOutput = document.getElementById('palm-oil-content');
+
+function clearData() {
+    productNameOutput.innerHTML = '';
+    allergens.innerHTML = '';
+    nutrientOutput.innerHTML = '';
+    veganOutput.innerHTML = '';
+    palmOilOutput.innerHTML = '';
+}
+
 function fetchData() {
+    clearData();
+    productNameOutput.innerHTML = 'Loading...'
     let userInputValue = document.getElementById('input-field').value;
     let api_url = `https://world.openfoodfacts.org/api/v0/product/${userInputValue}.json`;
 
@@ -9,7 +25,7 @@ function fetchData() {
     .then(data => {
         console.log(data);
         if(data.status===0){
-            document.getElementById('product-name').innerHTML = (`Sorry, product ${userInputValue} not found! Enter another barcode.`);
+            productNameOutput.innerHTML = (`Sorry, product ${userInputValue} not found! Enter another barcode.`);
         }   
         
         var productData = data.product;
@@ -19,8 +35,8 @@ function fetchData() {
         var palmOilStatus = ingredientTags[0];
         var nutrients = productData.nutriments;
 
-        document.getElementById('product-name').innerHTML = "Product name: " + productData.product_name_en;
-        checkAllergens(allergens); 
+        productNameOutput.innerHTML = "Product name: " + productData.product_name_en;
+        checkAllergens(allergens);    
         checkNutrients(nutrients);
         checkIfVegan(veganStatus);
         checkPalmOil(palmOilStatus);
@@ -29,13 +45,11 @@ function fetchData() {
 
 // ------------------------CHECK FOR COMMON ALLERGENS -------------------------------------------
 function checkAllergens(allergens) {
-    document.getElementById('allergens').innerHTML = "common allergens: " + (allergens === "" ? "none found" : allergens);
+    allergenOutput.innerHTML = "common allergens: " + (allergens === "" ? "none found" : allergens);
 }
 
 // ------------------------CHECK FOR FATS,CARBS,SUGARS -------------------------------------------
 function checkNutrients(nutrients) {
-    let nutrientOutput = document.getElementById('nutrient-info');
-
     if((nutrients.fat && nutrients.carbohydrates && nutrients.sugars) != undefined) {
         nutrientOutput.innerHTML = "Fat: " + nutrients.fat + "g |" + " Carbs: " + nutrients.carbohydrates + "g |" +  " Sugars: " + nutrients.sugars + "g";
     }else {
@@ -44,8 +58,6 @@ function checkNutrients(nutrients) {
 
 // ---------------------------- CHECK IF VEGAN --------------------------------------------------
 function checkIfVegan(veganStatus) {
-    let veganOutput = document.getElementById('vegan-status');
-
     if((veganStatus.toString()) === "en:vegan-status-unknown" || "en:maybe-vegan") {
         veganOutput.innerHTML = "vegan status: unknown :(";
     }else if((veganStatus.toString()) === "en:vegan") {
@@ -56,8 +68,6 @@ function checkIfVegan(veganStatus) {
 
 // ------------------ CHECK IF PRODUCT CONTAINS PALM OIL ----------------------------------------
 function checkPalmOil(palmOilStatus) {
-    let palmOilOutput = document.getElementById('palm-oil-content');
-
     if((palmOilStatus.toString()) === "en:palm-oil") {
         palmOilOutput.innerHTML = "Contains Palm oil";
     }else if((palmOilStatus.toString()) === "en:palm-oil-free") {
