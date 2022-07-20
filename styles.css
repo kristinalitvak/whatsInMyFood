@@ -177,7 +177,7 @@ footer {
     text-shadow: -2px 2px 4px rgb(255, 87, 87);
 }
 
-@media only screen and (max-width: 1000px) {
+@media only screen and (max-width: 1024px) {
     body {
         width:100%;
     }
