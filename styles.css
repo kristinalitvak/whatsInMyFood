@@ -262,14 +262,9 @@ footer {
 }
 
 @media only screen and (max-width: 768px) {
-    html, body {
+    html, body, .site {
         position: relative;
         overflow-x: hidden;
-    }
-    
-    .site {
-        overflow-x: hidden;
-        position:relative;
     }
 
     .container {
