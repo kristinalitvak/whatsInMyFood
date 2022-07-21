@@ -1,10 +1,28 @@
+// ------------------------- Creating responsive nav menu ----------------------------------------------
+const burger = document.querySelector('.burger');
+const nav = document.querySelector('.nav-links');
+
+function toggleFunction() {
+    nav.classList.toggle('nav-active');
+}
+
+// -------------------- Closes the nav bar after clicking on link --------------------------------------
+function toggleClose() {
+    nav.classList.toggle('nav-active');
+}
+
+burger.addEventListener('click', toggleFunction);   // On click of burger, toggle the menu
+nav.addEventListener('click', toggleClose);         // Once link inside menu is clicked, close the menu
+
+// ----------------------------------------------------------------------------------------------------
+
 var productNameOutput = document.getElementById('product-name');
 var allergenOutput = document.getElementById('allergens');
 var nutrientOutput = document.getElementById('nutrient-info');
 var veganOutput = document.getElementById('vegan-status');
 var palmOilOutput = document.getElementById('palm-oil-content');
 
-function clearData() {
+function clearData() {                          
     productNameOutput.innerHTML = '';
     allergenOutput.innerHTML = '';
     nutrientOutput.innerHTML = '';
@@ -46,6 +64,7 @@ function fetchData() {
 function printProductName(productName) {
     if(productName === undefined || productName === '') {
         productNameOutput.innerHTML = "Product name: N/A";
+
     }else {
         productNameOutput.innerHTML = "Product name: " + productName;}
 }
@@ -66,7 +85,7 @@ function checkNutrients(nutrients) {
 // ---------------------------- CHECK IF VEGAN --------------------------------------------------
 function checkIfVegan(veganStatus) {
     if((veganStatus.toString()) === "en:vegan-status-unknown" || "en:maybe-vegan") {
-        veganOutput.innerHTML = "vegan status: n/a";
+        veganOutput.innerHTML = "vegan status: unknown :(";
     }else if((veganStatus.toString()) === "en:vegan") {
         veganOutput.innerHTML = "vegan status: vegan &#x2714;";
     }else if((veganStatus.toString()) === "en:non-vegan") {
