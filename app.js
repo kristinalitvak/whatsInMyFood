@@ -2,16 +2,16 @@
 const burger = document.querySelector('.burger');
 const nav = document.querySelector('.nav-links');
 
-function toggleFunction() {
+function toggleNav() {
     nav.classList.toggle('nav-active');
 }
 
 // -------------------- Closes the nav bar after clicking on link --------------------------------------
-function toggleClose() {
+function toggleNav() {
     nav.classList.toggle('nav-active');
 }
 
-burger.addEventListener('click', toggleFunction);   // On click of burger, toggle the menu
+burger.addEventListener('click', toggleNav);   // On click of burger, toggle the menu
 nav.addEventListener('click', toggleClose);         // Once link inside menu is clicked, close the menu
 // ----------------------------------------------------------------------------------------------------
 
