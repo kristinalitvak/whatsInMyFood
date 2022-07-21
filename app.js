@@ -13,7 +13,6 @@ function toggleClose() {
 
 burger.addEventListener('click', toggleFunction);   // On click of burger, toggle the menu
 nav.addEventListener('click', toggleClose);         // Once link inside menu is clicked, close the menu
-
 // ----------------------------------------------------------------------------------------------------
 
 var productNameOutput = document.getElementById('product-name');
