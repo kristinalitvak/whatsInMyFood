@@ -113,7 +113,7 @@ a:hover {
 }
 
 .submit-button {
-    padding: 15px;
+    padding: 13px;
     border-radius: 7px;
     border: none;
     background-color: rgb(255, 87, 87);
@@ -243,7 +243,7 @@ footer {
 
     .submit-button {
         font-size: 13px;
-        padding: 14px 16px;
+        padding: 15px 16px;
         margin: 0px;
     }
     
