@@ -264,12 +264,9 @@ footer {
 @media only screen and (max-width: 768px) {
     .site {
         overflow-x: hidden;
+        position:relative;
     }
-    
-    html, body {
-        overflow-x: hidden;
-    }
-    
+
     .container {
         overflow-x: hidden;
     }
