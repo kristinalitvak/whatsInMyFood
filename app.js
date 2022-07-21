@@ -6,13 +6,8 @@ function toggleNav() {
     nav.classList.toggle('nav-active');
 }
 
-// -------------------- Closes the nav bar after clicking on link --------------------------------------
-function closeNav() {
-    nav.classList.toggle('nav-active');
-}
-
-burger.addEventListener('click', toggleNav);   // On click of burger, toggle the menu
-nav.addEventListener('click', closeNav);         // Once link inside menu is clicked, close the menu
+burger.addEventListener('click', toggleNav);      // On click of burger, toggle the menu
+nav.addEventListener('click', toggleNav);         // Once link inside menu is clicked, close the menu
 // ----------------------------------------------------------------------------------------------------
 
 var productNameOutput = document.getElementById('product-name');
