@@ -1,10 +1,5 @@
 @import url('https://fonts.googleapis.com/css2?family=Roboto:wght@400;500&display=swap');
 
-body, html {
-    height: 100%;
-    overflow: visible;
-}
-
 * {
     margin: 0px;
     padding: 0px;
@@ -192,10 +187,6 @@ footer {
 }
 
 @media only screen and (max-width: 1024px) {
-    html {
-        overflow-y: hidden;
-    }
-    
     #fruit-logo {
         width: 210px;
         height: 210px;
@@ -274,7 +265,6 @@ footer {
     html, body, .site {
         position: relative;
         overflow-x: hidden;
-        height:100%;
     }
 
     .container {
