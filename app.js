@@ -7,7 +7,7 @@ function toggleNav() {
 }
 
 // -------------------- Closes the nav bar after clicking on link --------------------------------------
-function toggleNav() {
+function toggleClose() {
     nav.classList.toggle('nav-active');
 }
 
