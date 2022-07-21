@@ -187,7 +187,6 @@ footer {
 }
 
 @media only screen and (max-width: 1024px) {
-
     #fruit-logo {
         width: 210px;
         height: 210px;
@@ -263,6 +262,9 @@ footer {
 }
 
 @media only screen and (max-width: 768px) {
+    .site {
+        overflow-x: hidden;
+    }
     
     html, body {
         overflow-x: hidden;
