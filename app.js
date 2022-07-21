@@ -63,7 +63,6 @@ function fetchData() {
 function printProductName(productName) {
     if(productName === undefined || productName === '') {
         productNameOutput.innerHTML = "Product name: N/A";
-
     }else {
         productNameOutput.innerHTML = "Product name: " + productName;}
 }
