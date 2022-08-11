@@ -172,6 +172,10 @@ input[type=number]::-webkit-outer-spin-button {
     line-height: 50px;
 }
 
+.faq-list li {
+    list-style-type: none;
+}
+
 footer {
     background-color: rgba(0, 157, 230, 0.687);
     text-align: center;
