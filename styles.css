@@ -172,7 +172,7 @@ input[type=number]::-webkit-outer-spin-button {
     box-shadow: 2px 2px 2px rgb(255, 87, 87);
     margin-top: 5px;
     line-height: 50px;
-    text-align: center;
+    text-align: left;
 }
 
 #faq-list {
