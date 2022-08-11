@@ -173,7 +173,7 @@ input[type=number]::-webkit-outer-spin-button {
 }
 
 #faq-list {
-    list-style-type: number;
+    list-style-type: decimal;
 }
 
 footer {
