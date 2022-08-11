@@ -50,7 +50,7 @@ body {
     margin: 10px 70px;
 }
 
-li {
+.nav-links li {
     list-style-type: none;
     display: flex;
     flex-direction: row;
@@ -170,10 +170,6 @@ input[type=number]::-webkit-outer-spin-button {
     box-shadow: 2px 2px 2px rgb(255, 87, 87);
     margin-top: 5px;
     line-height: 50px;
-}
-
-#faq-list {
-    list-style-type: decimal;
 }
 
 footer {
